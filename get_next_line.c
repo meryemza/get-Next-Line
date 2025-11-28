@@ -6,7 +6,7 @@
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 21:39:52 by mezahir           #+#    #+#             */
-/*   Updated: 2025/11/26 13:53:57 by mezahir          ###   ########.fr       */
+/*   Updated: 2025/11/28 15:23:28 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char    *read_until_newline(int fd,char *str)
    buffer = malloc(BUFFER_SIZE + 1);
    if(!buffer)
     return (NULL);
-    count_rd = 1;
+count_rd = 1;
     while(!(ft_search(str,'\n')) && count_rd != 0)
     {
    count_rd = read(fd,buffer,BUFFER_SIZE);
@@ -30,7 +30,7 @@ char    *read_until_newline(int fd,char *str)
     return (NULL);
    }
    buffer[count_rd] = '\0';
-   str =ft_concat_str(str,buffer);
+   str = ft_concat_str(str,buffer);
     }
     free(buffer);
     return(str);   
@@ -47,7 +47,7 @@ char *ft_line(char *str)
         i++;
     if(str[i] == '\n')
         i++;
-    line = malloc(i +1);
+    line = malloc(i + 1);
     if(!line)
         return(NULL);
     j = 0;
@@ -78,11 +78,12 @@ char *ft_rest(char *str)
         free(str);
         return NULL;
     }
-    i++;
-    rest = malloc(strlen(str + i) + 1);
+    rest = malloc(ft_strlen(str) - i);
     if(!rest)
         return NULL;
     j = 0;
+    if(str[i] == '\n')
+        i++;
     while(str[i])
         rest[j++] = str[i++];
     rest[j] = '\0';
@@ -93,7 +94,7 @@ char *get_next_line(int fd)
 {
    static char *str;
    char *line;
-  if (fd < 0 || BUFFER_SIZE <= 0)
+  if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
    str = read_until_newline(fd,str);
    line = ft_line(str);

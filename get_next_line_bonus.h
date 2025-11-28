@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 17:46:23 by mezahir           #+#    #+#             */
-/*   Updated: 2025/11/28 17:19:57 by mezahir          ###   ########.fr       */
+/*   Created: 2025/11/27 15:28:19 by mezahir           #+#    #+#             */
+/*   Updated: 2025/11/28 11:32:14 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE  234
-
+#  define BUFFER_SIZE 4
 # endif
 
 # include <stdlib.h>
@@ -24,11 +22,12 @@
 # include <stdio.h>
 # include <unistd.h>
 
-char    *get_next_line(int fd);
+char    *get_next_line_bonus(int fd);
 char    *ft_search(char *str,int c);
 char    *ft_concat_str(char *str,char *buffer);
 char    *ft_strdup(char *str);
 char    *ft_strcpy(char *dest,char *src);
 size_t     ft_strlen(char *str);
 
-# endif
+
+#endif
