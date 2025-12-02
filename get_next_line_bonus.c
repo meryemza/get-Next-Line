@@ -6,7 +6,7 @@
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 14:37:41 by mezahir           #+#    #+#             */
-/*   Updated: 2025/11/28 12:13:20 by mezahir          ###   ########.fr       */
+/*   Updated: 2025/12/02 23:33:28 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char    *read_until_newline(int fd,char *str)
     char *buffer;
     int count_rd;
     
-    buffer = malloc(BUFFER_SIZE + 1);
+    buffer = malloc((size_t) BUFFER_SIZE + 1);
     if(!buffer)
         return(NULL);
     count_rd = 1;
@@ -40,7 +40,7 @@ char *ft_line(char *str)
 {
     char *line;
     int i;
-    if(!str)
+    if(!str[i])
         return (NULL);
     i = 0;
     while(str[i] && !(ft_search(str,'\n')) )

@@ -6,7 +6,7 @@
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 17:46:23 by mezahir           #+#    #+#             */
-/*   Updated: 2025/11/28 17:19:57 by mezahir          ###   ########.fr       */
+/*   Updated: 2025/12/02 23:29:06 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE  234
+#  define BUFFER_SIZE 0
 
 # endif
 
