@@ -41,8 +41,7 @@ size_t ft_strlen(char *str)
 char *ft_strcpy(char *dest,char *src)
 {
     int i;
-    if(!src)
-        return (NULL);
+    
     i = 0;
     while(src[i])
     {
@@ -91,7 +90,7 @@ char    *ft_concat_str(char *str,char *buffer)
     res = malloc(len1 + len2 + 1);
     if(!res)
         return(NULL);
-    res = ft_strcpy(res,str);
+    ft_strcpy(res,str);
     i = 0;
     while(buffer[i])
     {

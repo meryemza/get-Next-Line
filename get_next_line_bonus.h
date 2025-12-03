@@ -22,7 +22,7 @@
 # include <stdio.h>
 # include <unistd.h>
 
-char    *get_next_line_bonus(int fd);
+char    *get_next_line(int fd);
 char    *ft_search(char *str,int c);
 char    *ft_concat_str(char *str,char *buffer);
 char    *ft_strdup(char *str);
