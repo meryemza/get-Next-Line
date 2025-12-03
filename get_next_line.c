@@ -6,7 +6,7 @@
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 21:39:52 by mezahir           #+#    #+#             */
-/*   Updated: 2025/12/02 23:06:28 by mezahir          ###   ########.fr       */
+/*   Updated: 2025/12/03 10:21:16 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ char *read_until_newline(int fd, char *str)
     int count_rd;
     buffer = malloc((size_t)BUFFER_SIZE + 1);
     if (!buffer)
-    {
-        printf("hhhhhhhh mafiach \n");
         return (NULL);
-    }
     count_rd = 1;
     while (!(ft_search(str, '\n')) && count_rd != 0)
     {
