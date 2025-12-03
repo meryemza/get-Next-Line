@@ -6,7 +6,7 @@
 /*   By: mezahir <mezahir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 13:45:08 by mezahir           #+#    #+#             */
-/*   Updated: 2025/12/03 23:33:57 by mezahir          ###   ########.fr       */
+/*   Updated: 2025/12/03 23:46:25 by mezahir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_strcpy(char *dest, char *src)
 
 char	*ft_strdup(char *str)
 {
-	int		len;
+	size_t	len;
 	char	*dup;
 	size_t	i;
 
@@ -81,8 +81,8 @@ char	*ft_strdup(char *str)
 char	*ft_concat_str(char *str, char *buffer)
 {
 	int		i;
-	int		len1;
-	int		len2;
+	size_t	len1;
+	size_t	len2;
 	char	*res;
 
 	if (!str)
